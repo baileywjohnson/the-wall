@@ -1,0 +1,23 @@
+{
+  "name": "the-wall",
+  "version": "1.0.0",
+  "description": "This project is a mock social media (single-page) app featuring client-side routing that was written in vanilla JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baileywjohnson/the-wall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baileywjohnson/the-wall/issues"
+  },
+  "homepage": "https://github.com/baileywjohnson/the-wall#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
