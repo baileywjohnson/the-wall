@@ -1,6 +1,7 @@
 import About from "../views/About.js"
 import Wall from "../views/Wall.js"
 import ViewEntry from "../views/ViewEntry.js"
+import Find from "../views/Find.js"
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -21,8 +22,10 @@ const navigateTo = url => {
 const router = async () =>  {
     const routes = [
         {path: "/", view: About},
+        {path: "/about", view: About},
         {path: "/wall", view: Wall},
-        {path: "/wall/:id", view: ViewEntry}
+        {path: "/wall/:id", view: ViewEntry},
+        {path: "/find", view: Find}
     ];
 
     const matches = routes.map(
@@ -37,6 +40,7 @@ const router = async () =>  {
     let match = matches.find(match => match.result !== null);
     
     if(!match){
+        console.log("ding");
         match = {
             route: routes[0],
             result: [location.pathname]
@@ -46,6 +50,15 @@ const router = async () =>  {
     const view = new match.route.view(getParams(match));
 
     document.querySelector('#app').innerHTML = await view.getHtml();
+
+    if(document.getElementById('findPostForm')){
+        //Handling Form Submit for post Search
+        document.getElementById('findPostForm').addEventListener('submit', e => {
+            e.preventDefault();
+            let targetPost = document.getElementById('postIDInput').value;
+            navigateTo(`/wall/${targetPost}`);
+        })
+    }
 };
 
 //Handling Browser Navigation

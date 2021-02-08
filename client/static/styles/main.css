@@ -1,0 +1,93 @@
+body {
+    background-color: #0B132B;
+    color: white;
+    margin: auto;
+    width: 65%;
+    text-align: center;
+    margin-top: 2em;
+}
+
+header {
+    margin-bottom: 2em;
+}
+
+#headerTitle {
+    margin-bottom: 10px;
+}
+
+.navOption {
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #5BC0BE;
+    border-color: #5BC0BE;
+    color: black;
+}
+
+.navOption:hover {
+    background-color: #6FFFE9;
+    border-color: #6FFFE9;
+    color: black;
+}
+
+.navOption:not( :hover ){
+    background-color: #5BC0BE;
+    border-color: #5BC0BE;
+    color: black;
+}
+
+#aboutContent{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+#findContent{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+#findAnother{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    background-color: #1C2541;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.sectionTitle {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#postIDInput {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+#postFormButton{
+    margin-bottom: 20px;
+}
+
+#app {
+    background-color: #3A506B;
+    padding: 10px;
+    height: 100%;
+    border-radius: 25px;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
